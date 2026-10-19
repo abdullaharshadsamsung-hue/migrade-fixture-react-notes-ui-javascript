@@ -9,8 +9,9 @@ defineProps({
 const emit = defineEmits(['delete']);
 </script>
 
+<!-- The <li> is kept on one line on purpose so the whitespace matches the JSX output exactly:
+     title, one space, optional body span, then the button with no space before it.
+     (This comment lives outside <template> so the component keeps a single root element.) -->
 <template>
-  <!-- Kept on one line on purpose so the whitespace matches the JSX output exactly:
-       title, one space, optional body span, then the button with no space before it. -->
   <li><strong>{{ note.title }}</strong> <span v-if="note.body">— {{ note.body }}</span><button @click="emit('delete')">Delete</button></li>
 </template>
