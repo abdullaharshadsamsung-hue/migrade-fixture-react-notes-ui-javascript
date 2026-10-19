@@ -2,6 +2,8 @@
 // Presentational list item for a single note.
 // The source's `onDelete` callback prop is expressed as a `delete` emit;
 // parents should listen with `@delete="..."`.
+defineOptions({ name: 'NoteItem' });
+
 defineProps({
   note: { type: Object, required: true },
 });
